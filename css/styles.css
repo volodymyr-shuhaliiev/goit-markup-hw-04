@@ -61,6 +61,8 @@ img {
 }
 .page-header {
         border-bottom: 1px solid #e7e9fc;
+        box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+background: #fff;
 }
 
 .nav-link {
@@ -70,10 +72,28 @@ img {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: #2e2f42;
+        color: #2e2f42;  
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link.current {
+        position: relative;
+
+}
+.nav-link.current::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        background-color:#404bbf;
+
 }
 .nav-link:hover, 
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.current {
          color: #404bbf;
         
 }
@@ -88,6 +108,7 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover, 
 .contact-link:focus {
@@ -115,7 +136,10 @@ img {
         letter-spacing: 0.02em;
         text-align: center;
         color: #fff;
-        max-width: 496px; 
+        max-width: 496px;
+        margin-left: auto;
+        margin-right: auto;
+    
  
 }
 .button {
@@ -131,6 +155,9 @@ img {
         height: 56px;
         border: none;
         border-radius: 4px; 
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 48px;
 }
 .button:hover,
 .button:focus {
@@ -155,10 +182,7 @@ background-color: #404BBF
       clip: rect(0 0 0 0);
       overflow: hidden;
 }
-.advantages {
-        display: flex;
-        padding: 120px 0;
-}
+
 .advantages-list {
         display: flex;
         gap: 24px;
@@ -293,6 +317,7 @@ footer {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #f4f4fd;
+        max-width: 264px;
 }
 
 .footer-logo {
