@@ -433,3 +433,12 @@ footer {
         
 
 }
+.soc-icon-link.footer-soc:hover,
+.soc-icon-link.footer-soc:focus {
+        background-color: #31d0aa;
+}
+
+.soc-icons.footer-icons {
+        gap: 16px;
+
+}
